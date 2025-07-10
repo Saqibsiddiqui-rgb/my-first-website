@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Contact Us</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Contact Us</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="services.html">Services</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+  <main>
+    <section>
+      <h2>Get in Touch</h2>
+      <form id="contactForm">
+        <input type="text" id="name" placeholder="Your Name" required>
+        <input type="email" id="email" placeholder="Your Email" required>
+        <textarea id="message" placeholder="Your Message" required></textarea>
+        <button type="submit">Send</button>
+      </form>
+    </section>
+  </main>
+  <footer>&copy; 2025 My Website</footer>
+  <script src="script.js"></script>
+  <div id="chatBox">
+  <button id="chatToggle">💬 Chat</button>
+  <div id="chatWindow">
+    <h3>Chat with us!</h3>
+    <div id="chatMessages"></div>
+    <input type="text" id="chatInput" placeholder="Type your message..." />
+    <button id="chatSend">Send</button>
+  </div>
+</div>
+
+</body>
+</html>

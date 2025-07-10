@@ -1,0 +1,203 @@
+/* Reset and base styling */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  background: #f0f2f5;
+  color: #333;
+}
+
+/* Header */
+header {
+  background: linear-gradient(90deg, #1e3c72, #2a5298);
+  color: white;
+  padding: 20px 0;
+  text-align: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+nav a {
+  color: #fff;
+  margin: 0 15px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+nav a:hover {
+  color: #ffdd57;
+}
+
+/* Main content layout */
+main {
+  max-width: 1000px;
+  margin: auto;
+  padding: 30px 20px;
+  animation: fadeIn 1s ease-in;
+}
+
+/* Sections */
+section {
+  margin-bottom: 40px;
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  animation: slideUp 0.6s ease-in-out forwards;
+}
+
+/* Footer */
+footer {
+  background: #1e3c72;
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+  margin-top: 40px;
+}
+
+/* Buttons */
+button {
+  background: #1e3c72;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  transition: background 0.3s;
+}
+
+button:hover {
+  background: #16315e;
+  cursor: pointer;
+}
+
+/* Form styling */
+form input, form textarea {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+/* Responsive Grid */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Chat Popup */
+#chatBox {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  text-align: right;
+}
+
+#chatToggle {
+  padding: 10px;
+  border-radius: 50%;
+  background: #1e3c72;
+  color: white;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+#chatWindow {
+  display: none;
+  background: white;
+  width: 250px;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  padding: 15px;
+  margin-top: 10px;
+}
+
+#chatWindow h3 {
+  margin-bottom: 10px;
+}
+
+#chatMessages {
+  height: 100px;
+  overflow-y: auto;
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+
+#chatInput {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 5px;
+}
+
+#chatSend {
+  background: #1e3c72;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  cursor: pointer;
+  width: 100%;
+}
+
+/* Search Bar Styling */
+#searchInput {
+  width: 100%;
+  max-width: 400px;
+  padding: 12px 15px;
+  margin-bottom: 30px;
+  border: 1px solid #ccc;
+  border-radius: 30px;
+  font-size: 16px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  transition: all 0.3s ease-in-out;
+  outline: none;
+}
+
+#searchInput:focus {
+  border-color: #1e3c72;
+  box-shadow: 0 0 5px rgba(30, 60, 114, 0.4);
+}
+
+/* Search Bar with Icon */
+.search-wrapper {
+  position: relative;
+  max-width: 400px;
+  margin-bottom: 30px;
+}
+
+.search-wrapper i.fa-search {
+  position: absolute;
+  left: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #aaa;
+}
+
+.search-wrapper input {
+  padding-left: 40px !important; /* Make space for icon */
+}
